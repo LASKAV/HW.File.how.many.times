@@ -2,15 +2,16 @@
 #include <fstream>
 #include <string>
 
-// Дан текстовый файл.Посчитать, сколько
-// раз в нем встречается заданное пользователем слово.
+// Р”Р°РЅ С‚РµРєСЃС‚РѕРІС‹Р№ С„Р°Р№Р».РџРѕСЃС‡РёС‚Р°С‚СЊ, СЃРєРѕР»СЊРєРѕ
+// СЂР°Р· РІ РЅРµРј РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ Р·Р°РґР°РЅРЅРѕРµ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј СЃР»РѕРІРѕ.
+
 
 
 int main()
 {
     setlocale(LC_ALL, "ru");
 
-    std::cout << "Введите слово : ";
+    std::cout << "Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ : ";
     std::string str_file;                                            
     std::string str_user;                                            
 
@@ -31,7 +32,7 @@ int main()
 
         while (Reader_FILE >> str_file)                                            
         {
-            const char* found = strstr(str_user.c_str(), str_file.c_str());    // поиск строки в другой строке 
+            const char* found = strstr(str_user.c_str(), str_file.c_str());    // РїРѕРёСЃРє СЃС‚СЂРѕРєРё РІ РґСЂСѓРіРѕР№ СЃС‚СЂРѕРєРµ  
             if (found)                                                 
             {
                 iter++;                                                
@@ -40,7 +41,7 @@ int main()
 
         Reader_FILE.close();                                           
 
-        std::cout << "Слово " << str_user << " в файле повторялось =  " << iter << std::endl;
+        std::cout << "РЎР»РѕРІРѕ " << str_user << " РІ С„Р°Р№Р»Рµ РїРѕРІС‚РѕСЂСЏР»РѕСЃСЊ =  =  " << iter << std::endl;
     }
     
     return 0;
